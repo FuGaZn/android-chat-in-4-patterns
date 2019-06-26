@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.StyleableRes;
 
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 import lombok.Setter;
 import nju.androidchat.client.R;
@@ -34,6 +35,11 @@ public class ItemTextSend extends LinearLayout implements View.OnLongClickListen
 
         this.setOnLongClickListener(this);
         setText(text);
+    }
+
+    public void setImage(String text){
+        String str = text.substring(3,text.length()-1);
+        
     }
 
     public String getText() {
